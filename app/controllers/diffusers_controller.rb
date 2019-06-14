@@ -1,6 +1,6 @@
 class DiffusersController < ApplicationController
   def index
-    @diffusers = Diffuser.all
+    @diffusers = Diffuser.page(params[:page]).per(10)
 
     render("diffuser_templates/index.html.erb")
   end
