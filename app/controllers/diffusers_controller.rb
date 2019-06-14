@@ -1,6 +1,7 @@
 class DiffusersController < ApplicationController
   def index
-    @diffusers = Diffuser.page(params[:page]).per(10)
+    @q = Diffuser.ransack(params[:q])
+    @diffusers = @q.result(:distinct => true).page(params[:page]).per(10)
 
     render("diffuser_templates/index.html.erb")
   end
