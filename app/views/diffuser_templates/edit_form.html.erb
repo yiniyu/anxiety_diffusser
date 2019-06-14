@@ -4,21 +4,15 @@
 
 <hr>
 
-<!-- Form diffuser start -->
 <form action="/update_diffuser/<%= @diffuser.id %>" method="post">
-<!-- Form diffuser end -->
 
-  <!-- Label and input for emotions_id start -->
   <div class="form-group">
     <label for="emotions_id">
       Emotions
     </label>
 
-    <!-- Input for emotions_id start -->
     <input type="text" id="emotions_id" name="emotions_id" class="form-control" value="<%= @diffuser.emotions_id %>">
-    <!-- Input for emotions_id end -->
   </div>
-  <!-- Label and input for emotions_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Update diffuser
