@@ -2,25 +2,6 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root :to => "perspectives#index"
-  # Routes for the Diffuser resource:
-
-  # CREATE
-  get("/diffusers/new", { :controller => "diffusers", :action => "new_form" })
-  post("/create_diffuser", { :controller => "diffusers", :action => "create_row" })
-
-  # READ
-  get("/diffusers", { :controller => "diffusers", :action => "index" })
-  get("/diffusers/:id_to_display", { :controller => "diffusers", :action => "show" })
-
-  # UPDATE
-  get("/diffusers/:prefill_with_id/edit", { :controller => "diffusers", :action => "edit_form" })
-  post("/update_diffuser/:id_to_modify", { :controller => "diffusers", :action => "update_row" })
-
-  # DELETE
-  get("/delete_diffuser/:id_to_remove", { :controller => "diffusers", :action => "destroy_row" })
-
-  #------------------------------
-
   # Routes for the Emotion resource:
 
   # CREATE
